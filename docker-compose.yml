@@ -1,0 +1,10 @@
+version: '3'
+services:
+  apt-mirror:
+    build: .
+    image: gcslaoli/apt-mirror
+    restart: always
+    volumes:
+      # - ./mirror.list:/etc/apt/mirror.list
+      - ./mirror:/var/spool/apt-mirror
+
